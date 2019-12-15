@@ -1,0 +1,31 @@
+.link-button a {
+    padding: 0 0.3em;
+    text-decoration: none;
+    color: inherit;
+    background-size: 0 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease-in-out, color .4s ease-in-out;
+    border-radius: 0.1em;
+}
+
+.link-button a:hover {
+    background-position: left;
+    background-size: 100% 100%;
+}
+
+.link-button--dark a {
+    background-image: linear-gradient(white, white);
+}
+
+.link-button--dark a:hover {
+    color: var(--dark-blue);
+}
+
+.link-button--light a {
+    background-image: linear-gradient(var(--dark-blue), var(--dark-blue));
+}
+
+.link-button--light a:hover {
+    color: white;
+}

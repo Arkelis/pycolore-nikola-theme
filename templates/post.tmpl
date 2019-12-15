@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700|PT+Serif:400,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://www.pycolore.fr/python/_static/pygments.css">
+
+    <title>Ceci est le titre de mon super article&nbsp;!</title>
+</head>
+
+<body>
+    <header class="header header--light">
+        <nav class="nav nav--top">
+            <div class="nav__brand nav__item link-button link-button--light"><a href="/">Pycolore</a></div>
+            <ul class="nav__links">
+                <li class="nav__item link-button link-button--light delay-2"><a href="index.html">Blog</a></li>
+                <li class="nav__item link-button link-button--light delay-3"><a href="index.html">Mémos</a></li>
+                <li class="nav__item link-button link-button--light delay-4"><a href="index.html">Open Source</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <nav class="nav nav--sidebar">
+            <ul class="nav__links">
+                <li class="nav__item nav__item--title delay-1">
+                    Blog
+                    <ul class="nav__sublinks">
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="">Articles</a></li>
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="">Catégories</a></li>
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="">Flux RSS</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item nav__item--inactive link-button link-button--light delay-2"><a href="index.html">Mémos</a></li>
+                <li class="nav__item nav__item--inactive link-button link-button--light delay-3"><a href="index.html">Open Source</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <article>
+        <h1>{{ post.title() }}</h1>
+        <div class="content">
+            {{ post.text() }}
+        </div>
+    </article>
+    <footer class="footer">
+            <nav class="nav nav--bottom">
+                <ul class="nav__links">
+                    <li class="nav__item nav__item--title nav__item--grow">Blog
+                        <ul class="nav__sublinks">
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Articles</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Catégories</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Flux RSS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item nav__item--title nav__item--grow">Grands mémos
+                        <ul class="nav__sublinks">
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Python</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">OCaml</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Debian</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item nav__item--title nav__item--grow">Post-it
+                        <ul class="nav__sublinks">
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Notes</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Extraits de code</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item nav__item--title nav__item--grow">Open source
+                        <ul class="nav__sublinks">
+                            <li class="nav__subitem link-button link-button--dark"><a href="https://github.com/Arkelis">GitHub</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item nav__item--title nav__item--grow">Méta
+                        <ul class="nav__sublinks">
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Téléchargements</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">A propos du site</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__mentions">
+                <p>Copyright 2019 Guillaume Fayard. La partie blog du site Pycolore est créé avec le générateur de site statique <a href="https://getnikola.com/">Nikola</a>.</p>
+            </div>
+    </footer>
+    <script src="/assets/js/scripts.js"></script>
+</body>
+
+</html>
