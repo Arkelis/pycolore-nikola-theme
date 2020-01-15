@@ -1,0 +1,9 @@
+{% extends "base.tmpl" %}
+
+{% block title %}Articles{% endblock title %}
+
+{% block content %}
+{% for post in posts %}
+{{ post.permalink() }}
+{% endfor %}
+{% endblock content %}

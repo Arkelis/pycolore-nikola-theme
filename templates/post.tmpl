@@ -1,21 +1,17 @@
-{% extends "base.tmpl" %}
+{% extends "post_base.tmpl" %}
 
-<!DOCTYPE html>
-<html lang="fr">
+{% block title %}{{ post.title() }}{% endblock title %}
 
+{% block extra_head %}
 
-<body>
-    <header class="header header--light">
-        <nav class="nav nav--top">
-            <div class="nav__brand nav__item link-button link-button--light"><a href="/">Pycolore</a></div>
-            <ul class="nav__links">
-                <li class="nav__item link-button link-button--light delay-2"><a href="/blog/">Blog</a></li>
-                <li class="nav__item link-button link-button--light delay-3"><a href="index.html">Mémos</a></li>
-                <li class="nav__item link-button link-button--light delay-4"><a href="index.html">Open Source</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+<meta property="og:site_name" content="PyColore">
+<meta property="og:title" content="{{ post.title() }}">
+<meta property="og:url" content="{{ abs_link(post.permalink()) }}">
+<meta property="og:description" content="{{ post.text(strip_html=True, teaser_only=True) }}">
+<meta property="og:type" content="article">
+
+{% endblock %}
+
 {% block content %}
     <article>
         <h1>{{ post.title() }}</h1>

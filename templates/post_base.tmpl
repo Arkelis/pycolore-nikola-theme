@@ -20,22 +20,32 @@
 
 <body>
 
-    <header class="header header--dark">
+    <header class="header header--light">
         <nav class="nav nav--top">
-            <div class="nav__brand nav__item">Pycolore</div>
+            <div class="nav__brand nav__item link-button link-button--light"><a href="/">Pycolore</a></div>
             <ul class="nav__links">
-                <li class="nav__item link-button link-button--dark delay-2"><a href="blog/">Blog</a></li>
-                <li class="nav__item link-button link-button--dark delay-3"><a href="page.html">Mémos</a></li>
-                <li class="nav__item link-button link-button--dark delay-4"><a href="page.html">Open Source</a></li>
+                <li class="nav__item link-button link-button--light delay-2"><a href="/blog/">Blog</a></li>
+                <li class="nav__item link-button link-button--light delay-3"><a href="index.html">Mémos</a></li>
+                <li class="nav__item link-button link-button--light delay-4"><a href="index.html">Open Source</a></li>
             </ul>
         </nav>
-        <div class="greeting">
-            <h1>Articles de Pycolore</h1>
-        </div>
     </header>
-    <svg class="header-svg" viewBox="0 0 100 5">
-        <polygon points="0,0 100,0 0,5" style="fill:#0a2472" />
-    </svg>
+    <aside class="sidebar">
+        <nav class="nav nav--sidebar">
+            <ul class="nav__links">
+                <li class="nav__item nav__item--title delay-1">
+                    Blog
+                    <ul class="nav__sublinks">
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="/blog/">Articles</a></li>
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="/categories/">Catégories</a></li>
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="/rss.xml">Flux RSS</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item nav__item--inactive link-button link-button--light delay-2"><a href="index.html">Mémos</a></li>
+                <li class="nav__item nav__item--inactive link-button link-button--light delay-3"><a href="index.html">Open Source</a></li>
+            </ul>
+        </nav>
+    </aside>
 
 {% block content %}
 {% endblock %}
