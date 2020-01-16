@@ -46,8 +46,8 @@ body {
 }
 
 @keyframes fade-in-header-bg {
-    from { background-color: #fff; }
-    to { background-color: var(--dark-blue);}
+    from { opacity: 0; }
+    to { opacity: 1;}
 }
 
 .header-svg polygon {
@@ -110,7 +110,7 @@ body {
 }
 
 .nav:not(.nav--sidebar) {
-    padding: 4em 6em 0 6em;
+    padding: 3.5em 3.5em 0 3.5em;
 }
 
 .nav--bottom .nav__links {
@@ -257,7 +257,7 @@ main {
 
 .greeting {
     width: 70em;
-    margin: 10em auto 0 auto;
+    margin: 7em auto 0 auto;
 }
 
 .greeting h1, article h1 {
@@ -348,9 +348,9 @@ main p {
     display: none;
     transition: opacity .4s;
     float: left;
-    margin-left: 6em;
+    margin-left: 3.5em;
     position: sticky;
-    top: 4em;
+    top: 3.5em;
 }
 
 
@@ -369,7 +369,7 @@ article .content {
 article h1 {
     color: var(--dark-blue);
     width: 80%;
-    margin-bottom: 1em;
+    margin-bottom: 3.5rem;
 }
 
 article p, article li {
