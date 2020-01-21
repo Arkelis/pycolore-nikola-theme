@@ -146,6 +146,7 @@ body {
 }
 
 .nav__subitem {
+    font-size: 0.9em;
     margin-top: 1em;
 }
 
@@ -285,11 +286,16 @@ section .cards .card {
     color: var(--dark);
     position: relative;
     flex: 1;
-    border: solid 1px var(--grey);
+    /* border: solid 1px var(--grey); */
     margin: 0 0.75em;
-    border-radius: 0.5em;
     padding: 1em;
-    transition: color .4s ease-in-out, border .4s ease-in-out, background-color .4s ease-in-out, box-shadow .4s ease-in-out;
+    background: linear-gradient(var(--light), var(--light)) no-repeat;
+    background-size: 100% .5rem;
+    transition: 
+        color .4s ease-in-out,
+        border .4s ease-in-out,
+        background-size .4s ease-in-out,
+        border-radius .4s ease-in-out;
 }
 
 section .cards .card__header h3 {
@@ -327,9 +333,8 @@ section .cards .card:hover .card__footer a {
 }
 
 section .cards .card:hover {
-    background-color: var(--light);
-    box-shadow: 0px 3px 5px var(--light-grey);
-    border: solid 1px transparent;
+    background-size: 100% 100%;
+    border-radius: .5em;
 }
 
 section .cards .card:hover .card__header {
