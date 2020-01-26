@@ -2,6 +2,11 @@ const header = document.querySelector(".header")
 const sidebar = document.querySelector(".sidebar")
 const footer = document.querySelector(".footer")
 
+/** 
+ * Gestion de l'affichage / masquage de la sidebar en fonction de la position de scroll
+ * Affiche le menu uniquement si le header et le footer ne sont pas apparents. 
+ */
+
 function toggleSidebar(entries, registry) {
     let isIntersecting = false
     entries.forEach(entry => {

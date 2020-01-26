@@ -2,6 +2,8 @@
 
 {% block title %}Articles{% endblock title %}
 
+{% block page_title %}Articles de Pycolore{% endblock %}
+
 {% block content %}
 {% for post in posts %}
 {{ post.permalink() }}

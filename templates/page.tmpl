@@ -1,6 +1,16 @@
-{% extends "post_base.tmpl" %}
+{% extends "base.tmpl" %}
 
-{% block title %}{{ post.title() }}{% endblock title %}
+{% block title %}
+{{ title|e }}
+{% endblock title %}
+
+{% block page_title %}
+{{ title|e }}
+{% endblock page_title %}
+
+{% block page_description %}
+{{ description|e }}
+{% endblock page_description %}
 
 {% block extra_head %}
 
@@ -13,11 +23,7 @@
 {% endblock %}
 
 {% block content %}
-    <article>
-        <h1>{{ post.title() }}</h1>
-        Écrit le {{ post.formatted_date("d MMMM YYY") }}. Tags: {{ post.alltags }}
-        <div class="content">
-            {{ post.text() }}
-        </div>
-    </article>
+<main>
+    {{ post.text() }}
+</main>
 {% endblock %}

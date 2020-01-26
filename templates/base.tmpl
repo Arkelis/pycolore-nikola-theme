@@ -22,15 +22,16 @@
 
     <header class="header header--dark">
         <nav class="nav nav--top">
-            <div class="nav__brand nav__item link-button"><a href="/">Pycolore</a></div>
+            <div class="nav__brand nav__item link-button link-button--dark"><a href="/">Pycolore</a></div>
             <ul class="nav__links">
-                <li class="nav__item link-button link-button--dark delay-2"><a href="blog/">Blog</a></li>
-                <li class="nav__item link-button link-button--dark delay-3"><a href="page.html">Mémos</a></li>
+                <li class="nav__item link-button link-button--dark delay-2"><a href="/blog/">Blog</a></li>
+                <li class="nav__item link-button link-button--dark delay-3"><a href="/">Mémos</a></li>
                 <li class="nav__item link-button link-button--dark delay-4"><a href="page.html">Open Source</a></li>
             </ul>
         </nav>
         <div class="greeting">
-            <h1>Articles de Pycolore</h1>
+            <h1>{% block page_title %}{% endblock %}</h1>
+            <p>{% block page_description %}{% endblock page_description %}</p>
         </div>
     </header>
     <svg class="header-svg" viewBox="0 0 100 5">
@@ -45,9 +46,9 @@
                 <ul class="nav__links">
                     <li class="nav__item nav__item--title nav__item--grow">Blog
                         <ul class="nav__sublinks">
-                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Articles</a></li>
-                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Catégories</a></li>
-                            <li class="nav__subitem link-button link-button--dark"><a href="page.html">Flux RSS</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="/blog/">Articles</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="/categories/">Catégories</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="/rss.xml">Flux RSS</a></li>
                         </ul>
                     </li>
                     <li class="nav__item nav__item--title nav__item--grow">Grands mémos
@@ -80,7 +81,6 @@
                 <p>Copyright 2019 Guillaume Fayard. La partie blog du site Pycolore est créé avec le générateur de site statique <a href="https://getnikola.com/">Nikola</a>.</p>
             </div>
     </footer>
-    <script src="/assets/js/scripts.js"></script>
 </body>
 
 </html>
