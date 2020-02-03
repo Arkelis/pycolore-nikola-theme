@@ -25,18 +25,32 @@
             <div class="nav__brand nav__item link-button link-button--dark"><a href="/">Pycolore</a></div>
             <ul class="nav__links">
                 <li class="nav__item link-button link-button--dark delay-2"><a href="/blog/">Blog</a></li>
-                <li class="nav__item link-button link-button--dark delay-3"><a href="/">Mémos</a></li>
-                <li class="nav__item link-button link-button--dark delay-4"><a href="page.html">Open Source</a></li>
+                <li class="nav__item link-button link-button--dark delay-3"><a href="#">Mémos</a>
+                    <ul class="nav__sublinks" id="memos">
+                        <li class="nav__subitem link-button link-button--dark"><a href="/python/">Python</a></li>
+                        <li class="nav__subitem link-button link-button--dark"><a href="/ocaml/">OCaml</a></li>
+                        <li class="nav__subitem link-button link-button--dark"><a href="/debian/">Debian</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item link-button link-button--dark delay-4"><a href="#">Projets</a>
+                    <ul class="nav__sublinks" id="projects">
+                        <li class="nav__subitem link-button link-button--dark"><a href="/portfolio/">Portfolio</a></li>
+                        <li class="nav__subitem link-button link-button--dark"><a href="https://github.com/Arkelis">Dépôts GitHub</a></li>
+                    </ul>
+                </li>
             </ul>
+            <div class="menu-icon">
+                <span></span>
+                <svg x="0" y="0"  width="54px" height="54px" viewBox="0 0 54 54">
+                    <path d="M16.500,27.000 C16.500,27.000 24.939,27.000 38.500,27.000 C52.061,27.000 49.945,15.648 46.510,11.367 C41.928,5.656 34.891,2.000 27.000,2.000 C13.193,2.000 2.000,13.193 2.000,27.000 C2.000,40.807 13.193,52.000 27.000,52.000 C40.807,52.000 52.000,40.807 52.000,27.000 C52.000,13.000 40.837,2.000 27.000,2.000"></path>
+                </svg> 
+            </div>
         </nav>
         <div class="greeting">
             <h1>{% block page_title %}{% endblock %}</h1>
             <p>{% block page_description %}{% endblock page_description %}</p>
         </div>
     </header>
-    <svg class="header-svg" viewBox="0 0 100 5">
-        <polygon points="0,0 100,0 0,5" style="fill:#0a2472" />
-    </svg>
 
 {% block content %}
 {% endblock %}
@@ -81,6 +95,7 @@
                 <p>Copyright 2019 Guillaume Fayard. La partie blog du site Pycolore est créé avec le générateur de site statique <a href="https://getnikola.com/">Nikola</a>.</p>
             </div>
     </footer>
+    <script src="/assets/js/hamburger.js"></script>
 </body>
 
 </html>
