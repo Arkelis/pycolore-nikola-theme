@@ -1,0 +1,80 @@
+.menu-icon {
+  position: fixed;
+  right: 2rem;
+  width: 54px;
+  height: 54px;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  transition: transform 0.5s;
+  z-index: 2;
+}
+
+.menu-icon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 22px;
+  height: .1rem;
+  background-color: #fff;
+  transition: background 0.5s, transform 0.5s;
+  transition: background 0.5s steps(1, end);
+}
+
+.menu-icon span::before,
+.menu-icon span::after {
+  transform-origin: 100% 50%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 22px;
+  height: .1rem;
+  transform: translateY(-8px);
+  background-color: #fff;
+  transition: transform 0.5s;
+}
+
+.menu-icon span::after {
+  transform: translateY(8px);
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+svg {
+  opacity: 0;
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 22 230;
+  transition: stroke-dasharray 0.5s, stroke-dashoffset 0.5s, opacity 0.5s steps(1, end);
+}
+
+.menu-icon.is-opened span {
+  transition: background 0.5s steps(1, start);
+  background-color: transparent;
+}
+
+.menu-icon.is-opened svg {
+  opacity: 1;
+  stroke-dasharray: 160;
+  stroke-dashoffset: -65;
+  transition: stroke-dasharray 0.5s, stroke-dashoffset 0.5s, opacity 0.5s steps(1, start);
+}
+
+.menu-icon.is-opened span::before {
+  transform: translateX(-3px) translateY(-8px) rotate(-45deg);
+}
+
+.menu-icon.is-opened span::after {
+  transform: translateX(-3px) translateY(8px) rotate(45deg);
+}
+
+@media screen and (min-width: 600px) {
+    .menu-icon {
+        display: none;
+    }
+}
