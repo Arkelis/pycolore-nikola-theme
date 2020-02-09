@@ -11,7 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="https://www.pycolore.fr/python/_static/pygments.css">
+    <link rel="stylesheet" href="/assets/css/code.css">
 
     <title>{% block title %}{% endblock %} | Pycolore</title>
 
@@ -25,9 +25,26 @@
             <div class="nav__brand nav__item link-button link-button--light"><a href="/">Pycolore</a></div>
             <ul class="nav__links">
                 <li class="nav__item link-button link-button--light delay-2"><a href="/blog/">Blog</a></li>
-                <li class="nav__item link-button link-button--light delay-3"><a href="index.html">Mémos</a></li>
-                <li class="nav__item link-button link-button--light delay-4"><a href="index.html">Open Source</a></li>
+                <li class="nav__item link-button link-button--light delay-3"><a href="#">Mémos</a>
+                    <ul class="nav__sublinks memos">
+                        <li class="nav__subitem link-button link-button--light"><a href="/python/">Python</a></li>
+                        <li class="nav__subitem link-button link-button--light"><a href="/ocaml/">OCaml</a></li>
+                        <li class="nav__subitem link-button link-button--light"><a href="/debian/">Debian</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item link-button link-button--light delay-4"><a href="#">Projets</a>
+                    <ul class="nav__sublinks projects">
+                        <li class="nav__subitem link-button link-button--light"><a href="/portfolio/">Portfolio</a></li>
+                        <li class="nav__subitem link-button link-button--light"><a href="https://github.com/Arkelis">Dépôts GitHub</a></li>
+                    </ul>
+                </li>
             </ul>
+            <div class="menu-icon">
+                <span></span>
+                <svg x="0" y="0"  width="54px" height="54px" viewBox="0 0 54 54">
+                    <path d="M16.500,27.000 C16.500,27.000 24.939,27.000 38.500,27.000 C52.061,27.000 49.945,15.648 46.510,11.367 C41.928,5.656 34.891,2.000 27.000,2.000 C13.193,2.000 2.000,13.193 2.000,27.000 C2.000,40.807 13.193,52.000 27.000,52.000 C40.807,52.000 52.000,40.807 52.000,27.000 C52.000,13.000 40.837,2.000 27.000,2.000"></path>
+                </svg> 
+            </div>
         </nav>
     </header>
     <aside class="sidebar">
@@ -37,12 +54,23 @@
                     Blog
                     <ul class="nav__sublinks">
                         <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="/blog/">Articles</a></li>
-                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="/categories/">Catégories</a></li>
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="/blog/categories/">Catégories</a></li>
                         <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="/rss.xml">Flux RSS</a></li>
                     </ul>
                 </li>
-                <li class="nav__item nav__item--inactive link-button link-button--light delay-2"><a href="index.html">Mémos</a></li>
-                <li class="nav__item nav__item--inactive link-button link-button--light delay-3"><a href="index.html">Open Source</a></li>
+                <li class="nav__item nav__item--inactive link-button link-button--light delay-2"><a>Mémos</a>
+                    <ul class="nav__sublinks memos">
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="page.html">Python</a></li>
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="page.html">OCaml</a></li>
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="page.html">Debian</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item nav__item--inactive link-button link-button--light delay-3"><a>Open Source</a>
+                    <ul class="nav__sublinks projects">
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="/portfolio/">Portfolio</a></li>
+                        <li class="nav__subitem nav__subitem--sidebar link-button link-button--light"><a href="https://github.com/Arkelis">Dépôts GitHub</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </aside>
@@ -56,7 +84,7 @@
                     <li class="nav__item nav__item--title nav__item--grow">Blog
                         <ul class="nav__sublinks">
                             <li class="nav__subitem link-button link-button--dark"><a href="/blog/">Articles</a></li>
-                            <li class="nav__subitem link-button link-button--dark"><a href="/categories/">Catégories</a></li>
+                            <li class="nav__subitem link-button link-button--dark"><a href="/blog/categories/">Catégories</a></li>
                             <li class="nav__subitem link-button link-button--dark"><a href="/rss.xml">Flux RSS</a></li>
                         </ul>
                     </li>

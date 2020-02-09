@@ -13,6 +13,7 @@ menuIcon.onclick = event => {
 
 menuItems.forEach(element => {
     element.onclick = event => {
+        // event.preventDefault()
         element.classList.toggle("is-opened")
         menuItems.forEach(el => {
             if (!el.isEqualNode(element)) {

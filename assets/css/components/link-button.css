@@ -2,6 +2,7 @@
     padding: 0 0.3em;
     text-decoration: none;
     color: inherit;
+    background-image: linear-gradient(white, white);
     background-size: 0 100%;
     background-position: right;
     background-repeat: no-repeat;
@@ -12,20 +13,14 @@
 .link-button a:hover {
     background-position: left;
     background-size: 100% 100%;
-}
-
-.link-button--dark a {
-    background-image: linear-gradient(white, white);
-}
-
-.link-button--dark a:hover {
     color: var(--dark-blue);
 }
 
-.link-button--light a {
-    background-image: linear-gradient(var(--dark-blue), var(--dark-blue));
-}
-
-.link-button--light a:hover {
-    color: white;
+@media screen and (min-width: 600px) {
+    .link-button--light a {
+        background-image: linear-gradient(var(--dark-blue), var(--dark-blue));
+    }
+    .link-button--light a:hover {
+        color: white;
+    }
 }

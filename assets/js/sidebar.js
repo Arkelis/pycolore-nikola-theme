@@ -6,7 +6,6 @@ const footer = document.querySelector(".footer")
  * Gestion de l'affichage / masquage de la sidebar en fonction de la position de scroll
  * Affiche le menu uniquement si le header et le footer ne sont pas apparents. 
  */
-
 function toggleSidebar(entries, registry) {
     let isIntersecting = false
     entries.forEach(entry => {
@@ -28,5 +27,20 @@ function toggleSidebar(entries, registry) {
 }
 
 const observer = new IntersectionObserver(toggleSidebar, {})
-observer.observe(header)
-observer.observe(footer)
+window.onload = function() {
+    if (window.innerWidth >= 700) {
+        observer.observe(header)
+        observer.observe(footer)
+    } 
+}
+window.onresize = function(event) {
+    if (window.innerWidth <= 700) {
+        sidebar.removeAttribute("style")
+        observer.unobserve(header)
+        observer.unobserve(footer)
+    } else {
+        observer.observe(header)
+        observer.observe(footer)
+        // toggleSidebar(observer.takeRecords())
+    }
+}

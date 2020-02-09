@@ -2,6 +2,14 @@ const articles = document.querySelector(".posts-list")
 const rem = parseInt(getComputedStyle(document.body).fontSize)
 
 function setOrder() {
+    if (window.innerWidth < 800) {
+        console.log(window.innerWidth)
+        articles.removeAttribute("style")
+        articles.querySelectorAll(".card").forEach(element => {
+            element.removeAttribute("style")
+        })
+        return
+    }
     let firstColumnHeight = 0
     let secondColumnHeight = 0
     let order = 0
@@ -23,3 +31,7 @@ function setOrder() {
 }
 
 setOrder()
+
+window.onresize = function(event) {
+    setOrder()
+}
