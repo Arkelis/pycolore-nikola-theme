@@ -1,0 +1,18 @@
+{% extends "page.tmpl" %}
+
+{% block extra_head %}
+
+<meta property="og:site_name" content="PyColore">
+<meta property="og:title" content="{{ post.title() }}">
+<meta property="og:url" content="{{ abs_link(post.permalink()) }}">
+<meta property="og:description" content="{{ post.text(strip_html=True, teaser_only=True) }}">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="/assets/css/portfolio.css">
+
+{% endblock %}
+
+{% block content %}
+<main>
+    {{ post.text() }}
+</main>
+{% endblock %}

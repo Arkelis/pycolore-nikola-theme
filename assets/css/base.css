@@ -125,8 +125,7 @@ article h1 {
 
 .greeting {
   width: 70rem;
-  padding: 8em 0 0 0;
-  margin: auto;
+  margin: 8em auto 0 auto;
   color: var(--light);
 }
 
@@ -287,7 +286,7 @@ figure img {
 
 p a,
 .content a,
-main li a,
+main li:not(.link-button) a,
 .card__footer {
   background: linear-gradient(to top, var(--yellow) 0%, var(--yellow) 0.5em, transparent 0.5em) no-repeat;
   font-weight: normal;
@@ -299,7 +298,7 @@ main li a,
 
 p a:hover,
 .content a:hover,
-main li a:hover,
+main li:not(.link-button) a,
 .card:hover .card__footer {
   animation: underline ease-in-out 0.5s both;
   font-weight: bold;
@@ -532,7 +531,7 @@ article h6 {
   }
 
   .greeting {
-    padding: 8em 4em 0 4em;
+    margin: 8em 4em 0 4em;
     width: auto;
   }
   main {
@@ -639,7 +638,7 @@ article h6 {
     color: white;
   }
   .greeting {
-    padding: 2em 2em 0 2em;
+    margin: 2em 2em 0 2em;
   }
   .greeting h1 {
     font-size: 2.5em;

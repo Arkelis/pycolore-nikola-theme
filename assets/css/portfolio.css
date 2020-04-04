@@ -1,0 +1,62 @@
+main {
+    font-size: 0.95em;
+    margin: 0 8rem;
+    padding-bottom: 5em;
+    animation: fade-in-bottom 0.4s 0.7s ease-in-out both;
+    position: relative;
+    width: auto;
+}
+
+header.header.header--dark::after {
+    content: "";
+    border: none;
+}
+
+.greeting {
+    width: auto;
+    padding-right: 8rem;
+    padding-left: 8rem;
+}
+
+.project__thumbnails {
+    width: 32em;
+    height: 18em;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5em;
+    padding: 5em 0;
+    justify-items: center;
+    justify-content: stretch;
+}
+
+.project .nav__link--project {
+    font-family: var(--serif);
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.project .project__lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: stretch;
+}
+
+body {
+    background-color: var(--dark-blue);
+}
+
+body * {
+    color: white
+}
+
+.nav__links--flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav__links--flex  li {
+    margin-right: 2em;
+}
