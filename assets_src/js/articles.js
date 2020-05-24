@@ -1,7 +1,9 @@
-const articles = document.querySelector(".posts-list")
-const rem = parseInt(getComputedStyle(document.body).fontSize)
+export function setOrder() {
+    const articles = document.querySelector(".posts-list")
+    if (articles == null) return
 
-function setOrder() {
+    const rem = parseInt(getComputedStyle(document.body).fontSize)
+    console.log("called")
     if (window.innerWidth < 800) {
         console.log(window.innerWidth)
         articles.removeAttribute("style")
@@ -28,10 +30,9 @@ function setOrder() {
         element.style.order = order + index
     })
     articles.style.height = (firstColumnHeight > secondColumnHeight ? firstColumnHeight : secondColumnHeight) + "px"
+    window.addEventListener("resize", setOrder)
 }
 
-setOrder()
-
-window.onresize = function(event) {
-    setOrder()
+export function cleanSetOrder() {
+    window.removeEventListener("resize", setOrder)
 }

@@ -1,0 +1,117 @@
+
+body.portfolio {
+
+    background-color: var(--dark-blue);
+
+    * {
+        color: white
+    }
+    
+    header.header.header--dark::after {
+        content: "";
+        border: none;
+    }
+
+    .project {
+        display: grid;
+        grid-template-areas:
+            "thumbnail"
+            "description";
+    }
+
+    .project__title {
+        margin-top: 0;
+    }
+
+    .project__info {
+        grid-area: description;
+    }
+
+    .project__thumbnail {
+        grid-area: thumbnail;
+        width: 100%;
+        padding: 5em 0;
+    }
+
+    .project__thumbnail img {
+        display: block;
+        width: 100%;
+    }
+
+    .project__thumbnail a {
+        display: block;
+    }
+
+    .project .nav__link--project {
+        font-family: var(--serif);
+        margin-bottom: .5em !important;
+        margin-top: 0 !important;
+        font-weight: bold;
+    }
+
+    .nav__links--flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav__links--flex  li {
+        margin-right: 2em;
+    }
+
+    @media screen and (min-width: 600px) {
+        .project__thumbnail {
+            padding: 5em 1em;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        .project__thumbnail {
+            padding: 5em;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .project {
+            grid-column-gap: 5em;
+            padding: 5em 0;
+            justify-items: center;
+            justify-content: stretch;
+        }
+
+        .project--thumbnail-left {
+            grid-template-areas: "thumbnail description";
+        }
+        
+        .project--thumbnail-right {
+            grid-template-areas: "description thumbnail";
+        }
+        
+        .project__thumbnail {
+            width: 32em;
+            height: 18em;
+            padding: 0;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .project .project__lists {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: stretch;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .greeting {
+            width: auto;
+            padding-right: 8rem;
+            padding-left: 8rem;
+        }
+        main {
+            font-size: 0.95em;
+            margin: 0 8rem;
+            padding-bottom: 5em;
+            width: auto;
+        }
+    }    
+}

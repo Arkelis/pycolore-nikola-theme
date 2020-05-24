@@ -10,17 +10,22 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700|PT+Serif:400,700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="/assets/css/base.css?v=1.1">
     <link rel="stylesheet" href="/assets/css/code.css?v=1.1">
+
+    <!-- Swup -->
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+
+    <script src="/assets/js/main.js"></script>
 
     <title>{% block title %}{% endblock %} | Pycolore</title>
 
     {% block extra_head %}{% endblock %}
 </head>
 
-<body>
+<body class="{% block body_class %}{% endblock %}">
 
-    <header class="header header--dark">
+    <header class="header header--dark swup-header">
         <nav class="nav nav--top">
             <div class="nav__brand nav__item link-button "><a href="/">Pycolore</a></div>
             <ul class="nav__links">
@@ -46,14 +51,17 @@
                 </svg> 
             </div>
         </nav>
-        <div class="greeting">
+        <div class="greeting ">
             <h1>{% block page_title %}{% endblock %}</h1>
             <p>{% block page_description %}{% endblock page_description %}</p>
         </div>
     </header>
+    <aside class="swup-sidebar"></aside>
 
+<div class="swup-container">
 {% block content %}
 {% endblock %}
+</div>
 
     <footer class="footer">
             <nav class="nav nav--bottom">
@@ -96,7 +104,7 @@
                 <p>Copyright 2019 Guillaume Fayard. La partie blog du site Pycolore est créé avec le générateur de site statique <a href="https://getnikola.com/">Nikola</a>.</p>
             </div>
     </footer>
-    <script src="/assets/js/hamburger.js"></script>
+    {% block extra_scripts %}{% endblock %}
 </body>
 
 </html>

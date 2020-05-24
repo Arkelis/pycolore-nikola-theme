@@ -13,19 +13,17 @@
 {% endblock %}
 
 {% block content %}
-    <article>
-        <h1>{{ post.title() }}</h1>
-        <div class="content article-info">
-            Écrit le <a href="/blog/archive/{{ post.date.year }}/" class="article-date">{{ post.formatted_date("d MMMM YYY") }}</a>.
-            {% if post.alltags %}
-                Etiquettes :
-                {% for tag in post.alltags %}
-                    <a href="{{ _link('tag', tag) }}">{{ tag }}</a>
-                {% endfor %}
-            {% endif %}
-        </div>
-        <div class="content">
-            {{ post.text() }}
-        </div>
-    </article>
+    <h1>{{ post.title() }}</h1>
+    <div class="content article-info">
+        Écrit le <a href="/blog/archive/{{ post.date.year }}/" class="article-date">{{ post.formatted_date("d MMMM YYY") }}</a>.
+        {% if post.alltags %}
+            Etiquettes :
+            {% for tag in post.alltags %}
+                <a href="{{ _link('tag', tag) }}">{{ tag }}</a>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="content">
+        {{ post.text() }}
+    </div>
 {% endblock %}
