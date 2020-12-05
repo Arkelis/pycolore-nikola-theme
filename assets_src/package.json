@@ -5,5 +5,9 @@
   },
   "dependencies": {
     "swup": "^2.0.9"
+  },
+  "scripts": {
+    "make-js": "parcel build js/main.js -d ../assets/js",
+    "make-css": "parcel build css/base.scss -d ../assets/css"
   }
 }
